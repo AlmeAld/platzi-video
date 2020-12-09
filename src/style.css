@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  background-color: #ab88ff;
+  background-color: #8f57fd;
   color: #fff;
   font-family: "Poppins", sans-serif;
   /* font-weight: 600; */
@@ -62,4 +62,66 @@ ul:hover {
 .header__menu--profile img {
   width: 40px;
   margin-right: 8px;
+}
+
+.main {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.main__title {
+  font-size: 25px;
+}
+
+.input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  padding: 10px 20px;
+  width: 70%;
+  margin-top: 12px;
+}
+::placeholder {
+  color: #fff;
+}
+
+.carousel {
+  width: 100%;
+  overflow-x: scroll;
+  padding: 30px;
+  position: relative; /*todos los elementos dentro de carousel se van a posisionar en relacion al este que es el padre??*/
+}
+
+.carousel__container {
+  white-space: nowrap; /* para que el contenido ocupe todo su largo y no se vaya hacia abajo(uno debajo del otro)*/
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+
+.carousel-item {
+  background-color: burlywood;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden; /*El contenido es recortado y no se muestran barras de posición.*/
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms all;
+  transform: center left;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
 }
